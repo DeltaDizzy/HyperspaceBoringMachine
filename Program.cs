@@ -15,12 +15,19 @@ using System.Reflection;
 
 namespace HyperspaceBoringMachine
 {
+    /// <summary>
+    /// Initalizes and handles core bot functions
+    /// </summary>
     public class Program
     {
 
         static void Main(string[] args)
         { new Program().MainAsync().GetAwaiter().GetResult(); }
 
+        /// <summary>
+        /// Sets up services and logs in to the Discord Gateway
+        /// </summary>
+        /// <returns></returns>
         public async Task MainAsync()
         {
             var services = SetupServices();
